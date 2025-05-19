@@ -96,17 +96,17 @@
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<annotationProcessorPaths>
+						<!-- Lombok Processor -->
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.32</version>
+						</path>
 						<!-- MapStruct Processor -->
 						<path>
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
 							<version>1.5.5.Final</version>
-						</path>
-						<!-- Lombok Processor -->
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-							<version>1.18.30</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>

@@ -1,18 +1,18 @@
-package com.hiberius.hiberius.dto;
+package com.hiberius.hiberius.dto.request;
+
+import java.time.LocalDate;
+
+import com.hiberius.hiberius.dto.base.GlobalStatus;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-
-import java.time.LocalDate;
 
 @Data
 @RequiredArgsConstructor
-public class EmployeeDTO {
+public class EmployeeDTORq {
     private Long id;
     @NotBlank(message = "El nombre es obligatorio")
     private String name;
@@ -24,7 +24,7 @@ public class EmployeeDTO {
     private Double salary;
     private LocalDate initDate;
     private LocalDate endDate;
-    private String employeeStatus;
     private Long departmentId;
+    private GlobalStatus status;
 }
 
